@@ -79,3 +79,40 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("energy_comparison.png")
 plt.show()
+
+## To remove the series of text towards the end of the file, use this code.
+# Path to the folder containing the original PDB files
+pdb_folder = '/media/sudipta/638a7113-11e4-49cc-8a8f-e369d3ce1bd1/ML_PI/Pipeline_2/10000STEPS/10000PDBs_striped'
+
+# Path to the folder where the modified PDB files will be saved
+output_folder = '/media/sudipta/638a7113-11e4-49cc-8a8f-e369d3ce1bd1/ML_PI/Pipeline_2/10000STEPS/10000PDBs_striped_MN'
+
+# Make sure the output folder exists, if not, create it
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
+
+# Function to process a single PDB file and replace MG with MN
+def replace_mg_with_mn(input_file, output_file):
+    with open(input_file, 'r') as file:
+        # Read the content of the file
+        content = file.read()
+    
+    # Replace 'MG' with 'MN'
+    modified_content = content.replace('MG', 'MN')
+    
+    # Write the modified content to the output file
+    with open(output_file, 'w') as file:
+        file.write(modified_content)
+
+# Loop through all PDB files in the folder
+for pdb_file in os.listdir(pdb_folder):
+    if pdb_file.endswith('.pdb'):  # Only process PDB files
+        pdb_path = os.path.join(pdb_folder, pdb_file)
+        
+        # Define the output file path
+        output_pdb_path = os.path.join(output_folder, pdb_file)
+        
+        # Process the PDB file and replace MG with MN
+        replace_mg_with_mn(pdb_path, output_pdb_path)
+
+print(f"Processing complete. Modified PDB files saved in: {output_folder}")
