@@ -4,9 +4,9 @@ import pandas as pd
 import re
 
 # Define directories
-pdbqt_dir = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\DXD_Mutations\Old_Run\PDBQT_Charged"  # Folder containing receptor PDBQT files - Change as per requirement
-ligand_file = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\DXD_Mutations\Old_Run\NAG.pdbqt"  # Path to ligand PDBQT file - Change as per requirement
-output_dir = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\DXD_Mutations\Old_Run\Docking" # Change as per requirement
+pdbqt_dir = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\PDBQT_Charged"  # Folder containing receptor PDBQT files
+ligand_file = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\GlcNAc.pdbqt"  # Path to ligand PDBQT file
+output_dir = r"C:\Users\NANOPORE\Documents\Nakul\Data\ML\Pipeline_2\Docking"
 log_dir = os.path.join(output_dir, 'Logs')
 results_dir = os.path.join(output_dir, 'Outputs')
 
@@ -18,9 +18,9 @@ os.makedirs(log_dir, exist_ok=True)
 os.makedirs(results_dir, exist_ok=True)
 
 # Configuration for AutoDock Vina
-center_x, center_y, center_z = 17.779, 14.737, -16.491 # Change as per requirement
-size_x, size_y, size_z = 38, 36, 40 # Change as per requirement
-energy_range = 4 
+center_x, center_y, center_z = 9.993,  9.786, -21.096
+size_x, size_y, size_z = 64, 40, 40
+energy_range = 4
 exhaustiveness = 8
 
 # Prepare configuration for AutoDock Vina
