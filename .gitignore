@@ -1,0 +1,44 @@
+# Generated model files
+*.pth
+best_model.pth
+has_affinity_model.pth
+
+# Generated output files
+has_binding_affinity_predictions.csv
+training_history.png
+data_template.csv
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data files (optional - uncomment if you want to exclude data)
+# *.csv
+# *.json
+# *.pkl
