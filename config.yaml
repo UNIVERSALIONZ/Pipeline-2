@@ -1,0 +1,41 @@
+# Configuration for Binding Affinity Prediction
+# =============================================
+
+# Model Architecture
+model:
+  d_model: 512              # Transformer model dimension
+  n_heads: 8               # Number of attention heads
+  n_layers: 6              # Number of transformer layers
+  dropout: 0.1             # Dropout rate for regularization
+  
+# Training Parameters
+training:
+  batch_size: 16           # Batch size for training
+  learning_rate: 1e-4      # Initial learning rate
+  weight_decay: 1e-5       # L2 regularization
+  epochs: 100              # Maximum number of epochs
+  patience: 15             # Early stopping patience
+  num_workers: 4           # DataLoader workers
+  
+# Data Processing
+data:
+  protein_model: "esm2_t33_650M_UR50D"    # ESM-2 model variant
+  ligand_model: "seyonec/ChemBERTa-zinc-base-v1"  # ChemBERTa model
+  max_seq_length: 512      # Maximum sequence length
+  
+# Reproducibility
+random_seed: 42
+
+# Output Settings
+output:
+  model_save_path: "models/"
+  results_save_path: "results/"
+  plots_save_path: "plots/"
+  
+# Experimental Design
+experiment:
+  active_site_residues: [48, 50, 108]  # Active site positions to analyze
+  substrate_types:
+    A: "actual_substrate"    # Training substrate
+    B: "non_substrate_1"     # Training non-substrate  
+    C: "prediction_target"   # Prediction target

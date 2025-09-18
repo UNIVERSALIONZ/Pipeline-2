@@ -1,0 +1,6 @@
+Mutant_ID,Predicted_Binding_Affinity_kcal_mol,Rank,Confidence_Category
+HAS_A48V_D50E_D108A,-5.5521626,1,Strong
+HAS_A48L_D50K_D108F,-5.5521626,2,Strong
+HAS_A48I_D50R_D108Y,-5.5521626,3,Strong
+HAS_A48M_D50Q_D108W,-5.5521626,4,Strong
+HAS_A48T_D50N_D108H,-5.5521626,5,Strong
