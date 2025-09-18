@@ -1,0 +1,39 @@
+# Core deep learning framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Transformer models and tokenizers
+transformers>=4.30.0
+tokenizers>=0.13.0
+
+# Scientific computing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Machine learning utilities
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Molecular informatics (optional - for production use)
+# rdkit-pypi>=2022.9.5
+# biopython>=1.81
+
+# Progress bars and utilities
+tqdm>=4.65.0
+
+# For ESM-2 protein embeddings (Facebook's ESM models)
+# fair-esm>=2.0.0
+
+# For molecular transformers (DeepChem/ChemBERTa)
+# deepchem>=2.7.0
+
+# Additional utilities
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# For reproducible environments
+# pip-tools>=6.14.0
